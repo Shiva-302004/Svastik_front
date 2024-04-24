@@ -45,6 +45,7 @@ export function Signup(){
                                 });
                                 if(response.data.message === "user created successfully"){
                                     localStorage.setItem("token", response.data.token);
+                                    localStorage.setItem("userName", response.data.UserName);
                                     setLogin(true);
                                     navigate("/dashboard")
                                 }
@@ -77,6 +78,7 @@ export function Signup(){
                                 });
                                 if(response.data.message === "user created successfully"){
                                     localStorage.setItem("token", response.data.token);
+                                    localStorage.setItem("userName", response.data.UserName);
                                     setLogin(true);
                                     navigate("/dashboard")
                                 }

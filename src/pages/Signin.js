@@ -42,6 +42,7 @@ export function Signin(){
                                 console.log(response.data);
                                 if(response.data.response === "user login successfully"){
                                     localStorage.setItem("token", response.data.token);
+                                    localStorage.setItem("userName", response.data.UserName);
                                     setLogin(true);
                                     navigate("/dashboard")
                                 }
@@ -73,6 +74,7 @@ export function Signin(){
                                 console.log(response.data);
                                 if(response.data.response === "user login successfully"){
                                     localStorage.setItem("token", response.data.token);
+                                    localStorage.setItem("userName", response.data.UserName);
                                     setLogin(true);
                                     navigate("/dashboard")
                                 }

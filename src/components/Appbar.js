@@ -123,7 +123,7 @@ export const Appbar = ()=>{
                             <div className=" flex justify-center h-[40px] w-[40px] rounded-full bg-slate-500">
                                 <button onClick={()=>{
                                     setProfileClick(!profileClick);
-                                }} className="hover:text-blue-800 hover:underline h-full w-full"><span className="text-white font-bold">D</span></button>
+                                }} className="hover:text-blue-800 hover:underline h-full w-full"><span className="text-white font-bold">{localStorage.getItem("userName")[0]}</span></button>
                             </div>
                         </div>
                     </div>
