@@ -9,6 +9,7 @@ import video from "../assets/video/video2.mp4"
 import { useSetRecoilState } from "recoil";
 import { loginAtom } from "../stateMannagement";
 import axios from "axios";
+import { BackendURL } from "../config";
 
 export function Signin(){
     const [Email , setEmail] = useState("")
@@ -35,7 +36,7 @@ export function Signin(){
                     <div className="w-full flex justify-center">
                         <div className="pt-4 w-28">
                             <Button onPress={async ()=>{
-                                const response = await axios.post("http://localhost:3000/api/v1/user/signin",{
+                                const response = await axios.post("${BackendURL}user/signin",{
                                     UserName: Email,
                                     Password:Password
                                 });
@@ -67,7 +68,7 @@ export function Signin(){
                     <div className="w-full flex justify-center">
                         <div className="pt-4 w-28">
                             <Button onPress={async ()=>{
-                                const response = await axios.post("http://localhost:3000/api/v1/user/signin",{
+                                const response = await axios.post(`${BackendURL}user/signin`,{
                                     UserName: Email,
                                     Password:Password
                                 });

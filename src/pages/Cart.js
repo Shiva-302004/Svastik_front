@@ -4,6 +4,7 @@ import { loginAtom } from '../stateMannagement';
 import { useSetRecoilState } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 import { Footer } from '../components/Footer';
+import { BackendURL } from '../config';
 
 const Cart = () => {
     const [cart, setcart] = useState([])
@@ -26,7 +27,7 @@ const Cart = () => {
         }
     }, [setLogin, navigate])
     useEffect(() => {
-        fetch("http://localhost:3000/api/v1/user/cart/countofcart", {
+        fetch(`${BackendURL}user/cart/countofcart`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -39,7 +40,7 @@ const Cart = () => {
         })
     }, [cart, setcart])
     const handleMinus = (id) => {
-        fetch("http://localhost:3000/api/v1/user/cart/removefromcart", {
+        fetch(`${BackendURL}user/cart/removefromcart`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -67,7 +68,7 @@ const Cart = () => {
     }
     useEffect(() => {
         if (localStorage.getItem("token")) {
-            fetch("http://localhost:3000/api/v1/user/cart/getcart", {
+            fetch(`${BackendURL}user/cart/getcart`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -84,7 +85,7 @@ const Cart = () => {
     }, [])
     const handlePlus = (id) => {
         if (localStorage.getItem("token")) {
-            fetch("http://localhost:3000/api/v1/user/cart/addtocart", {
+            fetch(`${BackendURL}user/cart/addtocart`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

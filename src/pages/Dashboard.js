@@ -5,7 +5,6 @@ import { useSetRecoilState } from "recoil";
 import { loginAtom, menuAtom, profileAtom } from "../stateMannagement";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ItemComp } from "../components/ItemComp";
 import { AllDrone } from "../components/AllDrone";
 import { Footer } from "../components/Footer";
 

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { BackendURL } from "../config";
 
 
 export const ItemComp = ({title,price,description, quantity, id})=>{
     const handleclick=(id)=>{
-        fetch("http://localhost:3000/api/v1/user/cart/addtocart",{
+        fetch(`${BackendURL}user/cart/addtocart`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

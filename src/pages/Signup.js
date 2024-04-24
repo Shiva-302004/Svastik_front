@@ -9,6 +9,7 @@ import { BottomWarning } from "../components/BottomWarning";
 import video from "../assets/video/video3.mp4"
 import { useSetRecoilState } from "recoil";
 import { loginAtom } from "../stateMannagement";
+import { BackendURL } from "../config";
 
 export function Signup(){
     const [Email, setEmail] = useState("");
@@ -38,7 +39,7 @@ export function Signup(){
                     <div className="w-full flex justify-center">
                         <div className="pt-4 w-28">
                             <Button onPress={async ()=>{
-                                const response = await axios.post("http://localhost:3000/api/v1/user/signup",{
+                                const response = await axios.post("${BackendURL}user/signup",{
                                     UserName: Email,
                                     Name: Name,
                                     Password:Password
@@ -71,7 +72,7 @@ export function Signup(){
                     <div className="w-full flex justify-center">
                         <div className="pt-4 w-28">
                             <Button onPress={async ()=>{
-                                const response = await axios.post("http://localhost:3000/api/v1/user/signup",{
+                                const response = await axios.post(`${BackendURL}user/signup`,{
                                     UserName: Email,
                                     Name: Name,
                                     Password:Password

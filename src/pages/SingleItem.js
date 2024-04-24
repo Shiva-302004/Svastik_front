@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer";
 import { PiCurrencyInrBold } from "react-icons/pi";
 import { loginAtom } from "../stateMannagement";
 import { useSetRecoilState } from "recoil";
+import { BackendURL } from "../config";
 
 
 export const SingleItem = ()=>{
@@ -28,7 +29,7 @@ export const SingleItem = ()=>{
     useEffect(()=>{
         const getdata = async ()=>{
             try{
-                const response = await axios.get(`http://localhost:3000/api/v1/drone/item/${id}`,{
+                const response = await axios.get(`${BackendURL}drone/item/${id}`,{
                     headers:{
                         "Authorization":localStorage.getItem("token")
                     }
@@ -44,7 +45,7 @@ export const SingleItem = ()=>{
 
     const handleclick=(id)=>{
         console.log("hii")
-        fetch("http://localhost:3000/api/v1/user/cart/addtocart",{
+        fetch(`${BackendURL}user/cart/addtocart`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

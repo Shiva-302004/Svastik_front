@@ -1,6 +1,7 @@
 import {  useEffect, useState } from "react";
 import { ItemComp } from "./ItemComp";
 import axios from "axios";
+import { BackendURL } from "../config";
 
 export function AllDrone() {
     const [Drones , setDrones] = useState([{
@@ -13,7 +14,7 @@ export function AllDrone() {
     }]);
     useEffect(()=>{
         const fetch = async () =>{
-            const response = await axios("http://localhost:3000/api/v1/drone/");
+            const response = await axios(`${BackendURL}drone/`);
             // console.log(response.data.Drone.length)
             if(response.data.Drone.length > 0){
                 setDrones(response.data.Drone);
