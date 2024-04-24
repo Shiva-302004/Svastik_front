@@ -24,7 +24,7 @@ export const Appbar = ()=>{
                     </div>
                     <div className="col-span-8">
                         <div className="flex justify-end h-full text-white font-semibold max-md:font-bold max-md:text-[12px] max-lg:text-sm">
-                            <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Home</button>
+                            <button onClick={()=>navigate("/dashboard")} className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Home</button>
                             <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">About</button>
                             <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Contact</button>
                             <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Product</button>
@@ -93,7 +93,7 @@ export const Appbar = ()=>{
                     </div>
                     <div className="col-span-8">
                         <div className="flex justify-end h-full text-white font-semibold max-md:font-bold max-md:text-[12px] max-lg:text-sm">
-                            <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Home</button>
+                            <button onClick={()=>navigate("/dashboard")} className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Home</button>
                             <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">About</button>
                             <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Contact</button>
                             <button className="max-md:ml-2 ml-8 mr-2 hover:text-yellow-800">Product</button>

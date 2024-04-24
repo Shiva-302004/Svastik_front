@@ -3,6 +3,7 @@ import { Appbar } from '../components/Appbar'
 import { loginAtom } from '../stateMannagement';
 import { useSetRecoilState } from 'recoil';
 import { useNavigate } from 'react-router-dom';
+import { Footer } from '../components/Footer';
 
 const Cart = () => {
     const [cart, setcart] = useState([])
@@ -115,6 +116,11 @@ const Cart = () => {
                         </div>
                     })}
                 </div>
+            </div>
+            <div>
+            <div>
+             <Footer />
+            </div>
             </div>
         </div>
     )
