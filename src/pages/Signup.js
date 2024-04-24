@@ -39,7 +39,7 @@ export function Signup(){
                     <div className="w-full flex justify-center">
                         <div className="pt-4 w-28">
                             <Button onPress={async ()=>{
-                                const response = await axios.post("${BackendURL}user/signup",{
+                                const response = await axios.post(`${BackendURL}user/signup`,{
                                     UserName: Email,
                                     Name: Name,
                                     Password:Password
