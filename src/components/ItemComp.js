@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export const ItemComp = ({title,price,description, quantity, id})=>{
@@ -19,7 +20,7 @@ export const ItemComp = ({title,price,description, quantity, id})=>{
             <div className="grid grid-cols-5">
                 <div className="col-span-3 border">
                     <div className="grid grid-cols-2 border">
-                        <div className="border font-bold text-4xl p-2">{title}</div>
+                        <Link className="border font-bold text-4xl p-2" to={`/item?id=${id}`}>{title}</Link>
                         <div className="border text-2xl text-slate-600 p-2 h-full flex flex-col justify-end">{price} Rs</div>
                     </div>
                     <div className="border h-80 text-slate-500 p-4">{description}</div>

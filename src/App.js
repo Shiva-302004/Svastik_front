@@ -5,6 +5,7 @@ import { Signin } from './pages/Signin';
 import { Signup } from './pages/Signup';
 import { RecoilRoot } from 'recoil';
 import Cart from './pages/Cart';
+import { SingleItem } from './pages/SingleItem';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/user/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/item" element={<SingleItem />} />
       </Routes>
       </BrowserRouter>
     </RecoilRoot>
