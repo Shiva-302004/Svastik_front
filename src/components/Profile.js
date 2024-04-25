@@ -14,7 +14,7 @@ export const Profile = ()=>{
             <div className="flex flex-col text-white space-x-4 space-y-6 pl-8 pr-8 pt-12 pb-6 rounded-bl-lg shadow-lg shadow-slate-600 bg-slate-500">
                 <button className="flex justify-start pl-4 hover:text-yellow-800">Profile</button>
                 <Link className="flex justify-start hover:text-yellow-800" to="/cart">Cart</Link>
-                <button className="flex justify-start hover:text-yellow-800">Order</button>
+                <Link className="flex justify-start hover:text-yellow-800" to="/order">Order</Link>
                 <button onClick={()=>{
                     localStorage.clear();
                     setLogin(false);
