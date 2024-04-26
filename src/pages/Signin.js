@@ -28,7 +28,7 @@ export function Signin(){
                 </div>
             </div>
             <div className="flex flex-col justify-center">
-                <div className="w-80 bg-white text-center p-2 min-h-[450px] px-4  shadow-2xl rounded-r-2xl shadow-slate-700">
+                <div className="w-80 bg-white text-center p-2 h-[450px] px-4  shadow-2xl rounded-r-2xl shadow-slate-700">
                     <Heading label={"Sign in"}/>
                     <SubHeading label={"Enter your credentials to access your account"}/>
                     <InputBox onChange={ e => setEmail(e.target.value)} label={"Email"} placeholder={"Enter your email"} type="email"/>

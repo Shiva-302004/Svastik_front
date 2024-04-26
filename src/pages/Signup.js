@@ -30,7 +30,7 @@ export function Signup(){
                 </div>
             </div>
             <div className="flex flex-col justify-center">
-                <div className="border bg-white w-80 text-center p-2 min-h-[540px] px-4 shadow-2xl rounded-r-2xl shadow-slate-700">
+                <div className="border bg-white w-80 text-center p-2 h-[540px] px-4 shadow-2xl rounded-r-2xl shadow-slate-700">
                     <Heading label={"Sign Up"}/>
                     <SubHeading label={"Enter your infromation to create an account"}/>
                     <InputBox onChange={ e => setName(e.target.value)}label={"Name"} placeholder={"Enter your name"} type={"text"}/>
