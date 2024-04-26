@@ -22,7 +22,6 @@ const Card = ({ Name, OrderId, address, phoneNo, pincode, product, referenceNo, 
                         </div>
                     </div>
                     <div className='flex mt-1'><span className='font-bold mr-2'>Status:</span><span className={`${status==="pending"||status==="processing"?"bg-yellow-300 rounded-md p-1 capitalize":""} ${status==="shipped"?"bg-orange-300 rounded-md p-1 capitalize":""} ${status==="delivered"?"bg-green-300 rounded-md p-1 capitalize":""}`}>{status}</span></div>
-                    
                 </div>
             </div>
 
