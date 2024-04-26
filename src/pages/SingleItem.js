@@ -66,11 +66,11 @@ export const SingleItem = ()=>{
             setMenuClick(false);
             setProfileClick(false);
         }}>
-                <div className="grid grid-cols-5 max-md:grid-cols-1 md:m-4 w-full pb-2">
+                <div className="grid grid-cols-5 max-md:grid-cols-1 w-full pb-2">
                     <div className="col-span-3 md:border-r h-[600px] max-md:h-[400px] w-full">
                         <img src={img} alt="loading" className="max-md:border-b h-full w-full"/>
                     </div>
-                    <div className="col-span-2 ml-4 pt-8">
+                    <div className="col-span-2 pl-4 pt-8">
                         <div className="font-bold text-4xl">{drone.Title}</div>
                         <div className="font-semibold text-1xl mt-8 text-slate-600">{drone.Description}</div>
                         <div className="text-2xl font-bold flex mt-10">{drone.Price} 
