@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { Appbar } from '../components/Appbar'
-import { loginAtom } from '../stateMannagement';
+import { loginAtom, menuAtom, profileAtom } from '../stateMannagement';
 import { useSetRecoilState } from 'recoil';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Footer } from '../components/Footer';
 import { BackendURL } from '../config';
+import img from "../image/vision.png"
+
 
 const Cart = () => {
     const [cart, setcart] = useState([])
     const [count, setcount] = useState(0)
     const [amount, setamount] = useState(0)
+    const setMenuClick = useSetRecoilState(menuAtom);
+    const setProfileClick = useSetRecoilState(profileAtom);
     const [order,setorder]=useState({
         product:[],
         address:""
@@ -115,15 +119,20 @@ const Cart = () => {
     return (
         <div className='overflow-hidden'>
             <Appbar />
-            <div className=' flex flex-col justify-center items-center w-[100vw] h-fit  pt-16'>
+            <div onClick={()=>{
+            setMenuClick(false);
+            setProfileClick(false);
+        }} className=' flex flex-col justify-center items-center w-[100vw] h-fit  pt-16'>
                 <div className='pt-14 text-2xl uppercase font-bold'>Your Cart</div>
                 <div className='divvv flex flex-col  items-center  w-[96vw] h-[65vh] md:w-[90vw] md:h-[60vh] lg:w-[60vw] border  rounded-lg mt-12 mb-10' style={{ boxShadow: " 4px 4px 1px grey" }}>
                     {cart.length === 0 ? <div className='mt-12'>NOTHING IS PRESENT</div> :
                         cart.map((item) => {
                             return <div key={item._id} className=" flex w-[89vw] h-[30vh] md:w-[85vw] md:h-[20vh] lg:w-[55vw] border border-slate-400 mt-2 rounded-lg">
-                                <div className='w-[40%] h-[90%] flex justify-center items-center border m-2'>pic</div>
+                                <div className='w-[40%] h-[90%] flex justify-center items-center border m-2'>
+                                    <img src={img} alt='loading...' className='h-full'/>
+                                </div>
                                 <div className='ml-2 md:ml-4 mt-6 flex flex-col md:mt-2'>
-                                    <div>{item.Title}</div>
+                                    <Link to={`/item?id=${item.DroneId}`} className='font-semibold'>{item.Title}</Link>
                                     <div className='flex mt-3 '>
                                         <button className='bg-blue-400 p-[1px] h-5 text-[14px] w-4 hover:bg-blue-200 rounded-md' onClick={() => handlePlus(item.DroneId)}>+</button>
                                         <span className='px-2 pb-[2px] text-[18px]'>{item.Count}</span>

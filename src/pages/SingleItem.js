@@ -4,10 +4,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { PiCurrencyInrBold } from "react-icons/pi";
-import { loginAtom } from "../stateMannagement";
+import { loginAtom, menuAtom, profileAtom } from "../stateMannagement";
 import { useSetRecoilState } from "recoil";
 import { BackendURL } from "../config";
-
+import img from "../image/vision.png"
 
 export const SingleItem = ()=>{
     // const id  = "6622d2404596713cd79cecd7";
@@ -16,6 +16,8 @@ export const SingleItem = ()=>{
     const navigate = useNavigate();
     const [drone , setDrone] = useState({});
     const setLogin = useSetRecoilState(loginAtom);
+    const setMenuClick = useSetRecoilState(menuAtom);
+    const setProfileClick = useSetRecoilState(profileAtom);
     useEffect(()=>{
         // get userValidate is better than this
         if(localStorage.getItem("token")){
@@ -58,11 +60,16 @@ export const SingleItem = ()=>{
     }
 
     return(
-        <div className="w-100% ">
+        <div className="w-100%" >
             <Appbar />
-            <div className="pt-20">
+            <div className="pt-20" onClick={()=>{
+            setMenuClick(false);
+            setProfileClick(false);
+        }}>
                 <div className="grid grid-cols-5 border-t m-4">
-                    <div className="col-span-3 border-r h-[600px]">image</div>
+                    <div className="col-span-3 border-r h-[600px]">
+                        <img src={img} alt="loading" className="border h-full"/>
+                    </div>
                     <div className="col-span-2 ml-4 pt-8">
                         <div className="font-bold text-4xl">{drone.Title}</div>
                         <div className="font-semibold text-1xl mt-8 text-slate-600">{drone.Description}</div>

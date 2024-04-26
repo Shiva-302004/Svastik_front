@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BackendURL } from "../config";
-
+import img from "../image/vision.png"
 
 export const ItemComp = ({title,price,description, quantity, id})=>{
     const handleclick=(id)=>{
@@ -33,8 +33,7 @@ export const ItemComp = ({title,price,description, quantity, id})=>{
                 </div>
                 <div className="col-span-2 border">
                     <div className="border h-[90%]">
-                        pic
-                        <img src="" alt="" />
+                        <img src={img} alt="" className="border h-full" />
                     </div>
                     <div className="border h-[10%] flex flex-col justify-end">
                         <div className="flex">

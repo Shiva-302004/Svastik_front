@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { AllDrone } from "../components/AllDrone";
 import { Footer } from "../components/Footer";
 
-export const Dashboard = ({login})=>{
+export const Dashboard = ()=>{
     const setMenuClick = useSetRecoilState(menuAtom);
     const setProfileClick = useSetRecoilState(profileAtom);
     const navigate = useNavigate();
