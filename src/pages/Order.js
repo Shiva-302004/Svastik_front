@@ -21,7 +21,7 @@ const Order = () => {
         }
     }, [setLogin, navigate])
     useEffect(()=>{
-        fetch(`${BackendURL}/getorder`,{
+        fetch(`${BackendURL}getorder`,{
             headers:{
                 "Content-Type":"application/json",
                 "Authorization":localStorage.getItem("token")
