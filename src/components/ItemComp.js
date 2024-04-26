@@ -37,7 +37,7 @@ export const ItemComp = ({title,price,description, quantity, id})=>{
                     </div>
                     <div className="max-md:hidden  h-[10%] flex flex-col justify-end">
                         <div className="flex">
-                            <div className="flex flex-col justify-center p-2 text-sm">{(quantity > 10)?"limited stock":`${quantity} left`}</div>
+                            <div className="flex flex-col justify-center p-2 text-sm">{(quantity > 10)?"Limited Stock":`${quantity} Left`}</div>
                             <Butt />
                         </div>
                     </div>

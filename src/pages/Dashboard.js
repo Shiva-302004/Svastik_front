@@ -39,10 +39,12 @@ export const Dashboard = ()=>{
                 </div>
                 <div className="h-[16%] w-full bg-slate-600">2</div>
                 </div>
-                <div className="h-screen w-full bg-slate-500">About</div>
-                <div className="w-full bg-gray-700 ">
-                    <div className="ml-2 text-4xl font-bold text-white py-4">Product</div>
+                <div className="w-full bg-gray-200 ">
+                    <div className="pl-2 text-3xl font-semibold text-gray-700 py-4 flex justify-center">Product</div>
                     <AllDrone />
+                </div>
+                <div className="h-screen w-full bg-gray-500">
+                    <div className="pl-2 text-3xl font-semibold  text-gray-700 bg-gray-200  py-4 flex justify-center">About</div>
                 </div>
             </div>
             <div>
