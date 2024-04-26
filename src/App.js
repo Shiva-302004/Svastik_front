@@ -6,6 +6,7 @@ import { Signup } from './pages/Signup';
 import { RecoilRoot } from 'recoil';
 import Cart from './pages/Cart';
 import { SingleItem } from './pages/SingleItem';
+import Order from './pages/Order';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/item" element={<SingleItem />} />
+        <Route path="/order" element={<Order></Order>}/>
       </Routes>
       </BrowserRouter>
     </RecoilRoot>
