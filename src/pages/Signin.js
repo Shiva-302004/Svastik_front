@@ -28,13 +28,13 @@ export function Signin(){
                 </div>
             </div>
             <div className="flex flex-col justify-center">
-                <div className="w-80 bg-white text-center p-2 h-[450px] px-4  shadow-2xl rounded-r-2xl shadow-slate-700">
+                <div className="w-80 bg-white text-center p-2 min-h-[450px] px-4  shadow-2xl rounded-r-2xl shadow-slate-700">
                     <Heading label={"Sign in"}/>
                     <SubHeading label={"Enter your credentials to access your account"}/>
                     <InputBox onChange={ e => setEmail(e.target.value)} label={"Email"} placeholder={"Enter your email"} type="email"/>
                     <InputBox onChange={ e => setPassword(e.target.value)} label={"Password"} placeholder={"Password"} type="password"/>
                     <div className="w-full flex justify-center">
-                        <div className="pt-4 w-28">
+                        <div className="pt-3 w-28 ">
                             <Button onPress={async ()=>{
                                 const response = await axios.post(`${BackendURL}user/signin`,{
                                     UserName: Email,
@@ -66,7 +66,7 @@ export function Signin(){
                     <InputBox onChange={ e => setEmail(e.target.value)} label={"Email"} placeholder={"abc@gmail.com"} type="email"/>
                     <InputBox onChange={ e => setPassword(e.target.value)} label={"Password"} placeholder={"******"} type="password"/>
                     <div className="w-full flex justify-center">
-                        <div className="pt-4 w-28">
+                        <div className="pt-3 w-28">
                             <Button onPress={async ()=>{
                                 const response = await axios.post(`${BackendURL}user/signin`,{
                                     UserName: Email,
