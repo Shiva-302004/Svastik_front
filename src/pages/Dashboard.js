@@ -31,13 +31,26 @@ export const Dashboard = ()=>{
                 setMenuClick(false);
                 setProfileClick(false);
             }}>
-            <div className="h-screen w-full bg-white">
-                <div className="h-[84%] w-full">
-                    <Svastik />
-                    {/* <VideoPlayer /> */}
-                    <video autoPlay muted loop src={video} className="h-full w-full object-cover" />
-                </div>
-                <div className="h-[16%] w-full bg-slate-600">2</div>
+                <div className="h-screen w-full bg-white">
+                    <div className="h-[84%] max-md:h-[80%] w-full">
+                        <Svastik />
+                        {/* <VideoPlayer /> */}
+                        <video autoPlay muted loop src={video} className="h-full w-full object-cover" />
+                    </div>
+                    <div className="h-[16%] max-md:h-[20%] w-full bg-slate-600 grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1">
+                        <div className="h-full  flex flex-col justify-center">
+                            <div className="flex justify-center text-white text-1xl">Trusted Brand</div>
+                        </div>
+                        <div className="h-full  flex flex-col justify-center">
+                            <div className="flex justify-center text-white text-1xl">Deliver All Across India</div>
+                        </div>
+                        <div className="h-full  flex flex-col justify-center">
+                            <div className="flex justify-center text-white text-1xl">Quick Services</div>
+                        </div>
+                        <div className="h-full  flex flex-col justify-center">
+                            <div className="flex justify-center text-white text-1xl">Custmor Support</div>
+                        </div>
+                    </div>
                 </div>
                 <div className="w-full bg-gray-200 ">
                     <div className="pl-2 text-3xl font-semibold text-gray-700 py-4 flex justify-center">Product</div>

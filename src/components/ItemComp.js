@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BackendURL } from "../config";
 import img from "../image/vision.png"
+import { PiCurrencyInrBold } from "react-icons/pi";
 
 export const ItemComp = ({title,price,description, quantity, id})=>{
     const handleclick=(id)=>{
@@ -17,12 +18,12 @@ export const ItemComp = ({title,price,description, quantity, id})=>{
         })
     }
     return (
-        <div className=" bg-white mb-8 border ">
+        <div className=" bg-white border">
             <div className="grid grid-cols-5 max-md:grid-cols-1 grid-cols-reverse ">
                 <div className="col-span-3  max-md:order-2">
                     <div className="md:h-[20%] border grid grid-cols-2 max-md:grid-cols-1 ">
-                        <Link className=" font-bold text-4xl p-2" to={`/item?id=${id}`}>{title}</Link>
-                        <div className=" text-2xl text-slate-600 p-2 h-full flex flex-col justify-end">{price} Rs</div>
+                        <Link className=" font-bold text-4xl p-2 flex flex-col justify-center" to={`/item?id=${id}`}>{title}</Link>
+                        <div className=" text-2xl text-slate-600 p-2 h-full flex flex-col justify-center"><div className="flex max-md:h-full">{price} <div className="h-full flex flex-col max-md:justify-center md:pt-1"><PiCurrencyInrBold/></div></div></div>
                     </div>
                     <div className="md:h-[60%] text-slate-500 p-4">{description}</div>
                     <div className="grid grid-cols-3 text-sm pt-2 pb-2 ">
@@ -35,13 +36,12 @@ export const ItemComp = ({title,price,description, quantity, id})=>{
                     <div className=" h-[90%]">
                         <img src={img} alt="" className=" h-full w-full" />
                     </div>
-                    <div className="max-md:hidden  h-[10%] flex flex-col justify-end">
+                    <div className="max-md:hidden  h-[9%] flex flex-col justify-end">
                         <div className="flex">
                             <div className="flex flex-col justify-center p-2 text-sm">{(quantity > 10)?"Limited Stock":`${quantity} Left`}</div>
                             <Butt />
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

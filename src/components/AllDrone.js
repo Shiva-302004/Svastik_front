@@ -22,10 +22,10 @@ export function AllDrone() {
         }
         fetch();
     },[])
-    return <>
+    return <div className="flex flex-col space-y-8">
         {Drones.map(drone => {
             return <ItemComp key={drone._id} id={drone._id} title={drone.Title} price={drone.Price} quantity={123} image={drone.Image} description={drone.Description}/>
         })}
 
-    </>
+    </div>
 }
